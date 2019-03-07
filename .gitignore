@@ -1,13 +1,15 @@
 ﻿bin/Release/SM64DSe.*
 bin/Debug/
 obj/
+.vs/
 
+# NuGet Packages Directory
+packages
 
 # User-specific files
 *.suo
 *.user
 *.sln.docstates
-
 
 # Windows image file caches
 Thumbs.db
