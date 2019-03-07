@@ -911,13 +911,13 @@ namespace SM64DSe
 
                                 if (!usesAnimation)
                                 {
-                                    Matrix4 bonemtx = matgroup.m_BoneMatrices[vtx.m_MatrixID];
+                                    Matrix3 bonemtx = new Matrix3(matgroup.m_BoneMatrices[vtx.m_MatrixID]);
                                     Vector3.Transform(ref finalvtx, ref bonemtx, out finalvtx);
                                 }
                                 else
                                 {
                                     int boneID = matgroup.m_BoneIDs[vtx.m_MatrixID];
-                                    Matrix4 animMatrix = animMatrices[boneID];
+                                    Matrix3 animMatrix = new Matrix3(animMatrices[boneID]);
                                     Vector3.Transform(ref finalvtx, ref animMatrix, out finalvtx);
                                 }
                                 Vector3.Multiply(ref finalvtx, scale, out finalvtx);
@@ -1043,13 +1043,13 @@ namespace SM64DSe
                                 Vector3 finalvtx = vtx.m_Position;
                                 if (!usesAnimation)
                                 {
-                                    Matrix4 bonemtx = matgroup.m_BoneMatrices[vtx.m_MatrixID];
+                                    Matrix3 bonemtx = new Matrix3(matgroup.m_BoneMatrices[vtx.m_MatrixID]);
                                     Vector3.Transform(ref finalvtx, ref bonemtx, out finalvtx);
                                 }
                                 else
                                 {
                                     int boneID = matgroup.m_BoneIDs[vtx.m_MatrixID];
-                                    Matrix4 animMatrix = animMatrices[boneID];
+                                    Matrix3 animMatrix = new Matrix3(animMatrices[boneID]);
                                     Vector3.Transform(ref finalvtx, ref animMatrix, out finalvtx);
                                 }
                                 Vector3.Multiply(ref finalvtx, scale, out finalvtx);
@@ -1092,13 +1092,13 @@ namespace SM64DSe
                                             Vector3 finalvtx = vtx.m_Position;
                                             if (!usesAnimation)
                                             {
-                                                Matrix4 bonemtx = matgroup.m_BoneMatrices[vtx.m_MatrixID];
+                                                Matrix3 bonemtx = new Matrix3(matgroup.m_BoneMatrices[vtx.m_MatrixID]);
                                                 Vector3.Transform(ref finalvtx, ref bonemtx, out finalvtx);
                                             }
                                             else
                                             {
                                                 int boneID = matgroup.m_BoneIDs[vtx.m_MatrixID];
-                                                Matrix4 animMatrix = animMatrices[boneID];
+                                                Matrix3 animMatrix = new Matrix3(animMatrices[boneID]);
                                                 Vector3.Transform(ref finalvtx, ref animMatrix, out finalvtx);
                                             }
                                             Vector3.Multiply(ref finalvtx, scale, out finalvtx);
@@ -1129,13 +1129,13 @@ namespace SM64DSe
                                             Vector3 finalvtx = vtx.m_Position;
                                             if (!usesAnimation)
                                             {
-                                                Matrix4 bonemtx = matgroup.m_BoneMatrices[vtx.m_MatrixID];
+                                                Matrix3 bonemtx = new Matrix3(matgroup.m_BoneMatrices[vtx.m_MatrixID]);
                                                 Vector3.Transform(ref finalvtx, ref bonemtx, out finalvtx);
                                             }
                                             else
                                             {
                                                 int boneID = matgroup.m_BoneIDs[vtx.m_MatrixID];
-                                                Matrix4 animMatrix = animMatrices[boneID];
+                                                Matrix3 animMatrix = new Matrix3(animMatrices[boneID]);
                                                 Vector3.Transform(ref finalvtx, ref animMatrix, out finalvtx);
                                             }
                                             Vector3.Multiply(ref finalvtx, scale, out finalvtx);
@@ -1168,13 +1168,13 @@ namespace SM64DSe
                                                 Vector3 finalvtx = vtx.m_Position;
                                                 if (!usesAnimation)
                                                 {
-                                                    Matrix4 bonemtx = matgroup.m_BoneMatrices[vtx.m_MatrixID];
+                                                    Matrix3 bonemtx = new Matrix3(matgroup.m_BoneMatrices[vtx.m_MatrixID]);
                                                     Vector3.Transform(ref finalvtx, ref bonemtx, out finalvtx);
                                                 }
                                                 else
                                                 {
                                                     int boneID = matgroup.m_BoneIDs[vtx.m_MatrixID];
-                                                    Matrix4 animMatrix = animMatrices[boneID];
+                                                    Matrix3 animMatrix = new Matrix3(animMatrices[boneID]);
                                                     Vector3.Transform(ref finalvtx, ref animMatrix, out finalvtx);
                                                 }
                                                 Vector3.Multiply(ref finalvtx, scale, out finalvtx);
@@ -1216,13 +1216,13 @@ namespace SM64DSe
                                                 Vector3 finalvtx = vtx.m_Position;
                                                 if (!usesAnimation)
                                                 {
-                                                    Matrix4 bonemtx = matgroup.m_BoneMatrices[vtx.m_MatrixID];
+                                                    Matrix3 bonemtx = new Matrix3(matgroup.m_BoneMatrices[vtx.m_MatrixID]);
                                                     Vector3.Transform(ref finalvtx, ref bonemtx, out finalvtx);
                                                 }
                                                 else
                                                 {
                                                     int boneID = matgroup.m_BoneIDs[vtx.m_MatrixID];
-                                                    Matrix4 animMatrix = animMatrices[boneID];
+                                                    Matrix3 animMatrix = new Matrix3(animMatrices[boneID]);
                                                     Vector3.Transform(ref finalvtx, ref animMatrix, out finalvtx);
                                                 }
                                                 Vector3.Multiply(ref finalvtx, scale, out finalvtx);

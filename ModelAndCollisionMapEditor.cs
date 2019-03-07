@@ -1342,7 +1342,8 @@ namespace SM64DSe
                 foreach (ModelBase.BoneDef bone in m_ModelBase.m_BoneTree)
                 {
                     Vector3 position = Vector3.Zero;
-                    Vector3.Transform(ref position, ref bone.m_GlobalTransformation, out position);
+                    Matrix3 mat3 = new Matrix3(bone.m_GlobalTransformation);
+                    Vector3.Transform(ref position, ref mat3, out position);
                     bonePositions.Add(bone.m_ID, position);
 
                     DrawCube(position, 0.125f, (bone == selectedBone) ? Color.HotPink : Color.Yellow);
