@@ -493,6 +493,15 @@
     <Content Include="Documentation\SM64DS Text Editing.txt" />
     <None Include="Images\collapseButton.png" />
     <None Include="Images\expandButton.png" />
+    <Content Include="OpenTK.Compatibility.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OpenTK.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OpenTK.GLControl.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Templates\Enemy.cpp" />
     <Content Include="Templates\Enemy.h" />
     <Content Include="Templates\Platform.cpp" />
