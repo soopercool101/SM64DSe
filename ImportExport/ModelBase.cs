@@ -1181,8 +1181,7 @@ namespace SM64DSe.ImportExport
                                     BoneDef currentVertexBone = m_BoneTree.GetAsList()[face.m_Vertices[vert].m_VertexBoneIndex];
 
                                     Vector3 vertex = face.m_Vertices[vert].m_Position;
-                                    Matrix3 mat3 = new Matrix3(currentVertexBone.m_GlobalTransformation);
-                                    Vector3.Transform(ref vertex, ref mat3, out vertex);
+                                    Vector3.Transform(ref vertex, ref currentVertexBone.m_GlobalTransformation, out vertex);
                                     face.m_Vertices[vert].m_Position = vertex;
                                 }
                             }
@@ -1214,8 +1213,7 @@ namespace SM64DSe.ImportExport
                                     BoneDef currentVertexBone = m_BoneTree.GetAsList()[face.m_Vertices[vert].m_VertexBoneIndex];
 
                                     Vector3 vertex = face.m_Vertices[vert].m_Position;
-                                    Matrix3 mat3 = new Matrix3(currentVertexBone.m_GlobalInverseTransformation);
-                                    Vector3.Transform(ref vertex, ref mat3, out vertex);
+                                    Vector3.Transform(ref vertex, ref currentVertexBone.m_GlobalInverseTransformation, out vertex);
                                     face.m_Vertices[vert].m_Position = vertex;
                                 }
                             }
